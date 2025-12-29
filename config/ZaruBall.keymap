@@ -125,7 +125,7 @@
 
         mouse_left {
             bindings = <&mkp LCLK>;
-            key-positions = <45 45 46>;
+            key-positions = <45 46>;
             layers = <0 1 2>;
         };
 
