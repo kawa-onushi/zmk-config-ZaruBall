@@ -126,26 +126,31 @@
         mouse_left {
             bindings = <&mkp LCLK>;
             key-positions = <45 45 46>;
+            layers = <0 1 2>;
         };
 
         mouse_right {
             bindings = <&mkp RCLK>;
             key-positions = <46 47>;
+            layers = <0 1 2>;
         };
 
         mouse_wheel_click {
             bindings = <&mkp MCLK>;
             key-positions = <45 46 47>;
+            layers = <0 1 2>;
         };
 
         mouse_prev {
             bindings = <&mkp MB4>;
             key-positions = <63 64>;
+            layers = <0 1 2>;
         };
 
         mouse_next {
             bindings = <&mkp MB5>;
             key-positions = <64 65>;
+            layers = <0 1 2>;
         };
     };
 
