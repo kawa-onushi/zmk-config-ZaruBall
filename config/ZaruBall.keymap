@@ -152,6 +152,11 @@
             key-positions = <64 65>;
             layers = <0 1 2>;
         };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <14 15>;
+        };
     };
 
     keymap {
