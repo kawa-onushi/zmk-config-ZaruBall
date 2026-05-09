@@ -26,6 +26,7 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: seeeduino_xiao_ble
     shield: ZaruBall_left rgbled_adapter
+    snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
     artifact-name: ZaruBall_left_logging
   - board: seeeduino_xiao_ble
