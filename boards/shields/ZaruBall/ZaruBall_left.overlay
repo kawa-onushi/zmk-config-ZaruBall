@@ -1,5 +1,9 @@
 #include "ZaruBall.dtsi"
 
+&spi0 { status = "disabled"; };
+&trackball { status = "disabled"; };
+&trackball_listener { status = "disabled"; };
+
 &kscan0 {
     gpios
         = <&xiao_d 0 GPIO_ACTIVE_HIGH>//M1
