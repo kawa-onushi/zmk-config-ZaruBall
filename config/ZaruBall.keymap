@@ -117,6 +117,59 @@
 
             label = "MKP_EXIT_AML";
         };
+
+        // プロファイルを選択し、他のホストへの接続を切断する
+        // （操作していない機器を起こさないため）
+
+        bt_only_0: bt_only_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings = <&bt BT_SEL 0>,
+                       <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            label = "BT_ONLY_0";
+        };
+
+        bt_only_1: bt_only_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings = <&bt BT_SEL 1>,
+                       <&bt BT_DISC 0>, <&bt BT_DISC 2>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            label = "BT_ONLY_1";
+        };
+
+        bt_only_2: bt_only_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings = <&bt BT_SEL 2>,
+                       <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            label = "BT_ONLY_2";
+        };
+
+        bt_only_3: bt_only_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings = <&bt BT_SEL 3>,
+                       <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 4>;
+            label = "BT_ONLY_3";
+        };
+
+        bt_only_4: bt_only_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <10>;
+            bindings = <&bt BT_SEL 4>,
+                       <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 3>;
+            label = "BT_ONLY_4";
+        };
     };
 };
 
@@ -215,7 +268,7 @@
             display-name = "Adjust";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans              &bt BT_CLR_ALL  &none  &none  &none  &none  &none
+&trans  &bt_only_0    &bt_only_1    &bt_only_2    &bt_only_3    &bt_only_4              &trans  &trans  &trans  &trans              &bt BT_CLR_ALL  &none  &none  &none  &none  &none
 &trans  &none         &none         &none         &none         &none                   &trans  &trans  &trans  &trans              &bt BT_CLR      &none  &none  &none  &none  &none
 &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_bat  &out OUT_TOG    &none  &none  &none  &none  &none
 &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_con  &studio_unlock  &none  &none  &none  &none  &none
